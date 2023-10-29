@@ -1,0 +1,87 @@
+html,
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border-bottom: solid 1px #ccc;
+}
+
+.header-title {
+    font-variant: small-caps;
+    font-weight: 200;
+    font-size: 30px;
+    margin: 0;
+}
+
+.header-link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-link-divider {
+    width: 1px;
+    height: 20px;
+    background: black;
+}
+
+header a {
+    margin: 0px 10px;
+    color: black;
+    text-decoration-color: rgba(0, 0, 0, 0);
+    transition: .5s;
+}
+
+header a:hover {
+    text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+#banner {
+    background: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-left i,
+.banner-left p {
+    color: white;
+    margin-left: 10px;
+}
+
+.banner-left i,
+.banner-right i {
+    border-radius: 6px;
+    padding: 8px;
+    transition: .5s;
+}
+
+.banner-right i {
+    padding: 8px;
+}
+
+.banner-left i:hover,
+.banner-right i:hover {
+    background: grey;
+}
+
+.banner-right i {
+    color: white;
+    margin-right: 10px;
+}
+
+.banner-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
