@@ -5,6 +5,4 @@ function closeBanner() {
 
     bannerLeft.style.display = 'none';
     bannerRight.style.display = 'none';
-
-    banner.style.height = '0px';
 }
