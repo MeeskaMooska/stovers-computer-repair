@@ -4,7 +4,9 @@
     width: 100%;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
     margin: 0;
 }
 
@@ -27,7 +29,7 @@ h1, h2, p {
     overflow: hidden;
     box-sizing: border-box;
     transition: .5s;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .expandable-about-div h2 {
@@ -89,13 +91,7 @@ h1, h2, p {
     transition: .5s;
     position: relative;
     overflow: hidden;
-}
-
-.services-card-text-container {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
-    overflow: hidden;
+    height: 12em;
 }
 
 .services-card-text-container p {

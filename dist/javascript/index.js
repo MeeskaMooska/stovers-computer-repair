@@ -1,7 +1,6 @@
 const tabs = document.querySelectorAll('.tab-content');
 document.getElementById('tab-content-1').style.maxHeight = document.getElementById('tab-content-1').scrollHeight + 'px';
 
-
 function handleAboutSectionClick(element) {
     tabs.forEach(tab => {
         tab.style.maxHeight = '0';
