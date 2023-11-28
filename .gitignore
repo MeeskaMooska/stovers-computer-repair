@@ -3,3 +3,4 @@
 .netlify
 
 services.txt
+dist/test.html

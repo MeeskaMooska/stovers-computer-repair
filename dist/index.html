@@ -5,307 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stover's Computer Repair</title>
-    <meta name="description"
-        content="Stover's Computer Repair is a computer repair shop located in Warrenton, VA, servicing Fauquier County since 2022.">
-    <meta name="keywords" content="computer repair, computer, repair, warrenton, va, virginia, fauquier, county">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Stover's Computer Repair">
-    <meta name="revisit-after" content="7 days">
-    <meta name="language" content="English">
-    <meta name="generator" content="VS Code">
     <link rel="stylesheet" href="stylesheets/master.css">
     <link rel="stylesheet" href="stylesheets/index.css">
 </head>
 
 <body>
-    <div id="banner">
-        <div id="banner-left" class="banner-left">
-            <a href="https://www.facebook.com/profile.php?id=61552551197313"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/stover.repair/"><i class="fa-brands fa-instagram"></i></a>
-            <p>Check out our socials!</p>
-        </div>
-        <div id="banner-right" class="banner-right"><i class="fa-solid fa-xmark" onclick="closeBanner()"></i></div>
-    </div>
     <header>
-        <div class="header-left header-link-container">
-            <a href="">Home</a>
-            <div class="header-link-divider"></div>
-            <a href="">About</a>
-            <div class="header-link-divider"></div>
-            <a href="">Services</a>
+        <div class="headerLeft">
+            <div class="logoContainer">
+                <p class="logoBold">SCR</p>
+                <p class="logoText">Stover's Computer</br>Repair</p>
+            </div>
         </div>
-        <h3 class="header-title">Stover's Computer Repair</h3>
-        <div class="header-right header-link-container">
-            <a href="">Contact</a>
-            <div class="header-link-divider"></div>
-            <a href="">FAQ</a>
-            <div class="header-link-divider"></div>
-            <a href="">Pricing</a>
+        <div class="headerRight">
+            <a href="#" class="headerLink">Services</a>
+            <a href="#" class="headerLink">About</a>
+            <a href="#" class="headerLink">Pricing</a>
+            <a href="#" class="headerLink">Contact</a>
         </div>
     </header>
-    <div class="about-div">
-        <div class="about-section-1">
-            <h1>About Me</h1>
-            <p>Est. 2023</p>
-            <p>Discover more about our mission, who we are, and what we stand for in the
-                expandable paragraphs to the right. We're here to make technology work for you.</p>
+    <div class="introContainer">
+        <div class="consultationContainer">
+            <h1>Schedule a free consultation today!</h1>
+            <p>Call or text us at <a href="tel:1-541-539-9868">(541) 539-9868</a></p>
+            <form action="" class="consultationContainerForm">
+                <div class="sharedHorizontalInput">
+                    <div class="inputLabelContainer">
+                        <label for="name" class="input-label">Name:</label>
+                        <input type="text" name="name" id="name" onfocus="inputFocusHandler(this)"
+                            onblur="inputBlurHandler(this)" required class="consultationInput">
+                    </div>
+                    <div class="inputLabelContainer">
+                        <label for="phone" class="input-label">Phone number:</label>
+                        <input type="tel" name="phone" id="phone" onfocus="inputFocusHandler(this)"
+                            onblur="inputBlurHandler(this)" required class="consultationInput">
+                    </div>
+                </div>
+                <div class="inputLabelContainer">
+                    <label for="email" class="input-label">Email:</label>
+                    <input type="email" name="email" id="email" onfocus="inputFocusHandler(this)"
+                        onblur="inputBlurHandler(this)" required class="consultationInput">
+                </div>
+                <div class="sharedHorizontalInput">
+                    <div class="inputLabelContainer">
+                        <label for="contactDay" class="select-label">Best day to reach you:</label>
+                        <select name="contactDay" id="contactDay" class="consultationSelect">
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday" selected>Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                    <div class="inputLabelContainer">
+                        <label for="contactTime" class="select-label">Best time to reach you:</label>
+                        <select name="contactTime" id="contactTime" class="consultationSelect">
+                            <option value="Morning">Morning</option>
+                            <option value="Afternoon" selected>Afternoon</option>
+                            <option value="Evening">Evening</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="submit" value="Schedule" class="consultationButton">
+            </form>
         </div>
-        <div class="about-section-2">
-            <div class="expandable-about-div" onclick="handleAboutSectionClick(this)">
-                <h2>Core Values</h2>
-                <div class="about-arrows-container"></div>
-                <div class="tab-content" id="tab-content-1">
-                    <p>
-                        <span class="bold">Excellence:</span> Excellence isn't a goal; it's my standard. I am committed
-                        to delivering top-tier service and solutions, ensuring your technology functions at its best. My
-                        aim is to not just meet but exceed your expectations.
-                        <br>
-                        <span class="bold">Integrity:</span> Trust is paramount in our interactions. I uphold the
-                        highest standards of integrity, conducting business transparently and honestly. You can rely on
-                        ethical conduct and a straightforward approach.
-                        <br>
-                        <span class="bold">Innovation:</span> In the ever-evolving tech landscape, I embrace change and
-                        innovation. I stay at the
-                        forefront of industry trends, allowing me to provide cutting-edge solutions tailored to your
-                        needs.
-                        <br>
-                        <span class="bold">Customer-Centric:</span> Your needs are at the forefront of my service. Every
-                        solution I offer and
-                        every interaction I have is dedicated to delivering value and surpassing your expectations.
-                    </p>
+        <div class="introImageContainer">
+            <div class="introImageOverlay">
+                <div class="overlayTextContainer">
+                    <h1 id="overlaySellingPoint" class="overlayText"></h1>
+                    <div class="insertionCursor"></div>
+                </div>
+                <div class="overlayTextContainer">
+                    <h1 id="overlaySlogan" class="overlayText"></h1>
+                    <div class="insertionCursor"></div>
                 </div>
             </div>
-            <div class="expandable-about-div" onclick="handleAboutSectionClick(this)">
-                <h2>Our History: Where we begin</h2>
-                <div class="about-arrows-container"></div>
-                <div class="tab-content">
-                    <p>Stover's Computer Repair is more than just a business; it's an adventure. Every step on
-                        this path, every client we serve, is a brick in the road that leads to the future.
-                    </p>
-                    <br>
-                    <p>Our journey began with a singular mission: to provide exceptional computer repair and IT
-                        solutions, one client at a time. Each of you, our valued clients, has been an essential part of
-                        this remarkable adventure.
-                    </p>
-                    <p>As a sole proprietor, I embarked on this path with a passion for technology and a commitment to
-                        excellence. From the very start, I knew that every customer would play a pivotal role in shaping
-                        our story.
-                    </p>
-                    <p>Your trust, your challenges, and your satisfaction have been the building blocks of our journey.
-                        With each service call, each problem solved, and every smile of relief from our clients, our
-                        path has grown stronger and more purposeful.
-                    </p>
-                    <p>So, when you choose us, you're not just a customer; you're a partner
-                        in our adventure. You're a vital brick in the road that we're building together. Your support
-                        and trust are the foundation of our history, and we look forward to many more chapters in this
-                        remarkable journey.
-                    </p>
-                    <p>
-                        Thank you for being part of our story. We're excited about the adventures that lie ahead, and
-                        we're honored to have you as our fellow traveler.
-                    </p>
-                </div>
-            </div>
-            <div class="expandable-about-div" onclick="handleAboutSectionClick(this)">
-                <h2>Title</h2>
-                <div class="about-arrows-container"></div>
-                <div class="tab-content">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
-                    </p>
-                </div>
-            </div>
-            <div class="expandable-about-div" onclick="handleAboutSectionClick(this)">
-                <h2>Title</h2>
-                <div class="about-arrows-container"></div>
-                <div class="tab-content">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
-                    </p>
-                </div>
-            </div>
-            <div class="expandable-about-div" onclick="handleAboutSectionClick(this)">
-                <h2>Title</h2>
-                <div class="about-arrows-container"></div>
-                <div class="tab-content">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
-                    </p>
-                </div>
-            </div>
-            <div class="expandable-about-div" onclick="handleAboutSectionClick(this)">
-                <h2>Title</h2>
-                <div class="about-arrows-container"></div>
-                <div class="tab-content">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
-                    </p>
-                </div>
-            </div>
+            <img src="resources/peopleShakingHands.jpeg" class="introImage" alt="Two people shaking hands.">
         </div>
     </div>
-    <div class="services-div">
-        <h1>Our Services:</h1>
-        <div class="services-card-container">
-            <div class="services-card">
-                <h3>Software Installation</h3>
-                <div class="service-card-divider"></div>
-                <div class="services-card-text-container">
-                    <h4>Effortless Software Installation:</h4>
-                    <p>We take the hassle out of software installation. Whether it's a new operating system,
-                        application, or
-                        program, our experts handle the setup process, ensuring everything runs smoothly.</p>
-                    <p>Enjoy quick and trouble-free installation, so you can focus on what you do best.</p>
-                    <h4>Peak Performance for Your Systems:</h4>
-                    <p>We don't just install software; we optimize it for peak performance. Our team fine-tunes your
-                        operating system and software to ensure they work seamlessly together.</p>
-                    <p>Experience faster, more efficient computing with our optimization services.</p>
-                    <h4>Tailored Solutions for Your Needs:</h4>
-                    <p>Your software needs are unique. We provide tailored recommendations for the right software and
-                        configurations to meet your specific requirements.</p>
-                    <p>Get software solutions that align perfectly with your business or personal computing needs.</p>
-                </div>
-                <div class="continue-reading-container">
-                    <button class="continue-reading-button">Continue reading</button>
-                </div>
-            </div>
-            <div class="services-card">
-                <h3>Hardware Troubleshooting:</h3>
-                <div class="service-card-divider"></div>
-                <div class="services-card-text-container">
-                    <h4>In-Depth Problem Analysis:</h4>
-                    <p>Our experts delve into various hardware problems and their telltale symptoms. We identify issues
-                        like system slowdowns, unusual noises, or device malfunctions to pinpoint the root causes.</p>
-                    <p>Understanding the problem is the first step toward effective troubleshooting.</p>
-                    <h4>Thorough Diagnostic Process:</h4>
-                    <p>We employ a comprehensive diagnostic process that includes hardware testing and thorough
-                        component inspection. We leave no stone unturned to identify the exact source of the problem.
-                    </p>
-                    <p>Our goal is to provide you with an accurate diagnosis and transparent solutions.</p>
-                    <h4>Quality Repairs and Replacements:</h4>
-                    <p>When it comes to hardware issues, we focus on quality and transparency. Our repair and
-                        replacement services are performed with precision and care, ensuring your devices function
-                        optimally.</p>
-                    <p>You can trust us for reliable hardware solutions that stand the test of time.</p>
-                </div>
-                <div class="continue-reading-container">
-                    <button class="continue-reading-button">Continue reading</button>
-                </div>
-            </div>
-            <div class="services-card">
-                <h3>Virus & Malware Removal:</h3>
-                <div class="service-card-divider"></div>
-                <div class="services-card-text-container">
-                    <h4>Identifying Infections:</h4>
-                    <p>Learn to recognize common signs of a virus or malware infection, such as slow performance, pop-up
-                        ads, or unusual system behavior.</p>
-                    <p>Early detection is crucial for effective virus and malware removal.</p>
-                    <h4>Effective Removal Methods:</h4>
-                    <p>Discover the methods and tools our experts use to remove viruses and malware. From antivirus
-                        software to manual removal, we've got you covered.</p>
-                    <p>Rest assured that your system will be thoroughly cleaned of any threats.</p>
-                    <h4>Preventing Future Infections:</h4>
-                    <p>Take proactive steps to prevent future infections. Our tips and recommendations will help you
-                        maintain a secure computer.</p>
-                    <p>Stay protected and keep your data safe from malicious threats.</p>
-                </div>
-                <div class="continue-reading-container">
-                    <button class="continue-reading-button">Continue reading</button>
-                </div>
-            </div>
-            <div class="services-card">
-                <h3>Network Assistance:</h3>
-                <div class="service-card-divider"></div>
-                <div class="services-card-text-container">
-                    <h4>Network Design and Setup:</h4>
-                    <p>Get detailed information on network design and setup for homes or businesses. Our experts help
-                        you plan and implement a reliable network infrastructure that meets your specific needs.</p>
-                    <p>We ensure your network is designed for optimal performance and connectivity.</p>
-
-                    <h4>Troubleshooting Network Issues:</h4>
-                    <p>We're here to troubleshoot common network issues and provide effective solutions. Whether it's
-                        slow connections, connectivity problems, or other network issues, we've got you covered.</p>
-                    <p>Rest assured, we'll resolve your network problems swiftly and efficiently.</p>
-
-                    <h4>Network Security and Best Practices:</h4>
-                    <p>Our guidance on network security helps you safeguard your network against potential threats. We
-                        offer best practices for maintaining a secure and reliable network environment.</p>
-                    <p>Protect your data and maintain a network you can depend on with our expert advice.</p>
-                </div>
-                <div class="continue-reading-container">
-                    <button class="continue-reading-button">Continue reading</button>
-                </div>
-            </div>
-            <div class="services-card">
-                <h3>Custom Builds & Upgrades:</h3>
-                <div class="service-card-divider"></div>
-                <div class="services-card-text-container">
-                    <h4>Benefits of Custom PC's:</h4>
-                    <p>Discover the advantages of custom-built computers and upgrades. Tailor your system to your unique
-                        needs and enjoy better performance, increased reliability, and optimized functionality.</p>
-
-                    <h4>Customization Options:</h4>
-                    <p>Explore the range of customization options available, including hardware choices, performance
-                        upgrades, and specialized components. Create a computer that perfectly fits your requirements.
-                    </p>
-
-                    <h4>Meeting User Requirements:</h4>
-                    <p>See real-life examples of how custom-built solutions meet specific user needs. Our expertise in
-                        customization ensures your computer performs exactly as you desire.</p>
-                </div>
-                <div class="continue-reading-container">
-                    <button class="continue-reading-button">Continue reading</button>
-                </div>
-            </div>
-            <div class="services-card">
-                <h3>Remote Support:</h3>
-                <div class="service-card-divider"></div>
-                <div class="services-card-text-container">
-                    <h4>How Remote Support Works:</h4>
-                    <p>Get an in-depth explanation of how remote support operates and its many advantages. Learn how we
-                        can assist you efficiently and securely, no matter where you are.</p>
-
-                    <h4>Remote Troubleshooting Tools:</h4>
-                    <p>Discover the software and tools we use for remote troubleshooting and assistance. Our advanced
-                        solutions ensure a smooth and effective support experience.</p>
-
-                    <h4>Initiating and Receiving Support:</h4>
-                    <p>Follow the steps for initiating and receiving remote support from our team. We make it easy for
-                        you to get the help you need, right when you need it.</p>
-                </div>
-                <div class="continue-reading-container">
-                    <button class="continue-reading-button">Continue reading</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://kit.fontawesome.com/382b2907de.js" crossorigin="anonymous"></script>
     <script src="javascript/engine.js"></script>
-    <script src="javascript/index.js"></script>
 </body>
 
 </html>
