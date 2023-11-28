@@ -43,16 +43,26 @@ header {
     justify-content: center;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
+}
+
+.logoContainer:hover .logoBold {
+    letter-spacing: 2px;
+}
+
+.logoContainer:hover .logoText {
+    letter-spacing: 1px;
 }
 
 .logoBold {
-    font-weight: 700;
+    font-weight: 900;
     margin: 0;
-    background: rgb(0, 0, 139);
+    background: var(--theme-1);
     font-size: 4vh;
     container-name: sidebar;
-    color: white;
+    color: var(--primary-1);
     padding: 0 4px;
+    transition: .3s;
 }
 
 .logoText {
@@ -60,6 +70,7 @@ header {
     margin: 0;
     container-name: sidebar;
     color: var(--theme-1);
+    transition: .3s;
 }
 
 .headerLink {
@@ -76,3 +87,38 @@ header {
     background: var(--accent-1);
 }
 
+.sectionBanner {
+    padding: 20px;
+    box-shadow: 0px 0px 8px 0px grey;
+    position: relative;
+}
+
+.sectionBanner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(130deg, white 50%, var(--accent-1) 50%);
+    background-size: 200% 100%;
+    background-position-x: 0%;
+    animation: slideBannerGradient 1s ease-in-out forwards;
+    z-index: -1;
+}
+
+@keyframes slideBannerGradient {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 80%;
+    }
+}
+
+.sectionBannerText {
+    margin: 0px;
+    font-size: 2em;
+    font-weight: 300;
+    color: var(--accent-1);
+}

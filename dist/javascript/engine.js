@@ -25,16 +25,16 @@ function inputBlurHandler(inputObject) {
 // Typing effect on home page image.
 // Selling point typewriter effect.
 const sellingPoints = [
-    "Expert Technicians at Your Service",
-    "Affordable Solutions for All Your Computer Needs",
-    "Same-Day Service for Urgent Repairs",
-    "Comprehensive Diagnostics and Repairs",
-    "Secure Handling of Your Data and Privacy",
-    "Upgrades and Maintenance for Peak Performance",
-    "Friendly and Professional Advice on All Tech Matters",
-    "Remote Support for Quick Fixes",
-    "Warranty on All Repairs and Parts",
-    "Custom Solutions for Home and Business Clients"
+    "Expert Technicians at Your Service.",
+    "Affordable Solutions for All Your Computer Needs.",
+    "Same-Day Service for Urgent Repairs.",
+    "Comprehensive Diagnostics and Repairs.",
+    "Secure Handling of Your Data and Privacy.",
+    "Upgrades and Maintenance for Peak Performance.",
+    "Friendly and Professional Advice on All Tech Matters.",
+    "Remote Support for Quick Fixes.",
+    "Warranty on All Repairs and Parts.",
+    "Custom Solutions for Home and Business Clients."
 ]
 const sellingPoint = document.getElementById('overlaySellingPoint')
 let sellingPointPos = 0
@@ -52,17 +52,16 @@ function sellingPointTypeWriter() {
 }
 
 function sellingPointDelete() {
-    console.log('here')
     if (sellingPointI > 0) {
         sellingPoint.innerHTML = sellingPoint.innerHTML.slice(0, -1)
         sellingPointI--
-        setTimeout(sellingPointDelete, 40)
+        setTimeout(sellingPointDelete, 30)
     } else if (sellingPointI === 0) {
         sellingPointI = 0
         sellingPoint.innerHTML = ''
         sellingPointPos < sellingPoints.length - 1 ? sellingPointPos++ : sellingPointPos = 0
         sellingPointText = sellingPoints[sellingPointPos]
-        setTimeout(sellingPointTypeWriter,  40)
+        sellingPointTypeWriter()
     }
     
 }

@@ -1,7 +1,7 @@
 .introContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding: 80px 0px;
     background: var(--primary-1);
@@ -148,8 +148,8 @@
     color: var(--primary-1);
     border-radius: 2px;
     padding: 20px;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
 }
 
 .overlayTextContainer {
@@ -166,13 +166,16 @@
 .overlayText {
     margin: 0;
     font-weight: 400;
+    display: inline;
 }
 
 .insertionCursor {
     width: 2px;
     background: var(--primary-1);
-    height: 2em;
     animation: blink .8s infinite;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 @keyframes blink {
@@ -186,3 +189,62 @@
         opacity: 0;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .introImage {
+        width: 550px;
+    }
+  }
+
+@media screen and (max-width: 1100px) {
+    .introImage {
+        width: 450px;
+    }
+
+    .overlayText {
+        font-size: 19px;
+    }
+  }
+
+@media screen and (max-width: 1000px) {
+    .introContainer {
+        flex-direction: column-reverse;
+        gap: 40px;
+        padding: 40px 0px;
+    }
+
+    .consultationContainer {
+        width: 80%;
+    }
+
+    .introContainer::after {
+        background: linear-gradient(180deg, var(--theme-2) 50%, white 50%);
+        background-size: 100% 200%;
+        background-position-y: 40%;
+        animation: slideGradientVertical 1s ease-in-out forwards;
+    }
+
+    .overlayText {
+        font-size: 17px;
+    }
+  }
+
+@media screen and (max-width: 900px) {
+    .introImage {
+        width: 400px;
+    }
+
+    .overlayText {
+        font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .introImage {
+        width: 340px;
+    }
+
+    .overlayText {
+        font-size: 13px;
+    }
+  }
