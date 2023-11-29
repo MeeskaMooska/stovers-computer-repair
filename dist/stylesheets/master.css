@@ -301,6 +301,8 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
 }
 
 .contactButton:hover {
