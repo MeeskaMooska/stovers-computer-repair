@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stover's Computer Repair</title>
-    <link rel="stylesheet" href="stylesheets/master.css">
-    <link rel="stylesheet" href="stylesheets/intro.css">
-    <link rel="stylesheet" href="stylesheets/services.css">
-    <link rel="stylesheet" href="stylesheets/pricing.css">
+    <link rel="stylesheet" href="../stylesheets/master.css">
+    <link rel="stylesheet" href="../stylesheets/services.css">
 </head>
-
 <body>
     <header>
         <div class="headerLeft">
@@ -20,10 +16,10 @@
             </div>
         </div>
         <div class="headerRight">
-            <a href="../services.html" class="headerLink">Services</a>
+            <a href="#" class="headerLink">Services</a>
             <a href="#" class="headerLink">About</a>
             <a href="#" class="headerLink">Pricing</a>
-            <a href="#contact" class="headerLink">Contact</a>
+            <a href="#" class="headerLink">Contact</a>
         </div>
         <div class="hamburgerContainer" onclick="handleHamburger()">
             <div class="hamburgerLine hamburgerLine1"></div>
@@ -31,68 +27,6 @@
             <div class="hamburgerLine hamburgerLine3"></div>
         </div>
     </header>
-    <div class="introContainer">
-        <div class="consultationContainer">
-            <h1>Schedule a free consultation today.</h1>
-            <p>Call or text us at <a href="tel:1-541-539-9868">(541) 539-9868</a></p>
-            <form action="" class="consultationContainerForm">
-                <div class="sharedHorizontalInput">
-                    <div class="inputLabelContainer">
-                        <label for="name" class="input-label">Name:</label>
-                        <input type="text" name="name" id="name" onfocus="inputFocusHandler(this)"
-                            onblur="inputBlurHandler(this)" required class="consultationInput">
-                    </div>
-                    <div class="inputLabelContainer">
-                        <label for="phone" class="input-label">Phone number:</label>
-                        <input type="tel" name="phone" id="phone" onfocus="inputFocusHandler(this)"
-                            onblur="inputBlurHandler(this)" required class="consultationInput">
-                    </div>
-                </div>
-                <div class="inputLabelContainer">
-                    <label for="email" class="input-label">Email:</label>
-                    <input type="email" name="email" id="email" onfocus="inputFocusHandler(this)"
-                        onblur="inputBlurHandler(this)" required class="consultationInput">
-                </div>
-                <div class="sharedHorizontalInput">
-                    <div class="inputLabelContainer">
-                        <label for="contactDay" class="select-label">Best day to reach you:</label>
-                        <select name="contactDay" id="contactDay" class="consultationSelect">
-                            <option value="Monday">Monday</option>
-                            <option value="Tuesday">Tuesday</option>
-                            <option value="Wednesday" selected>Wednesday</option>
-                            <option value="Thursday">Thursday</option>
-                            <option value="Friday">Friday</option>
-                            <option value="Saturday">Saturday</option>
-                            <option value="Sunday">Sunday</option>
-                        </select>
-                    </div>
-                    <div class="inputLabelContainer">
-                        <label for="contactTime" class="select-label">Best time to reach you:</label>
-                        <select name="contactTime" id="contactTime" class="consultationSelect">
-                            <option value="Morning">Morning</option>
-                            <option value="Afternoon" selected>Afternoon</option>
-                            <option value="Evening">Evening</option>
-                        </select>
-                    </div>
-                </div>
-                <input type="submit" value="Schedule" class="consultationButton">
-            </form>
-        </div>
-        <div class="introImageContainer">
-            <div class="introImageOverlay">
-                <div class="overlayTextContainer">
-                    <h1 class="overlayText"><span id="overlaySellingPoint"></span>
-                        <div class="insertionCursor"></div>
-                    </h1>
-                </div>
-                <div class="overlayTextContainer">
-                    <h1 id="overlaySlogan" class="overlayText"></h1>
-                    <div class="insertionCursor"></div>
-                </div>
-            </div>
-            <img src="resources/peopleShakingHands.jpeg" class="introImage" alt="Two people shaking hands.">
-        </div>
-    </div>
     <div class="servicesContainer">
         <div class="sectionBanner">
             <h1 class="sectionBannerText">Our Services</h1>
@@ -292,70 +226,6 @@
             </div>
         </div>
     </div>
-    <div class="pricingContainer" id="pricing">
-        <div class="sectionBanner">
-            <h1 class="sectionBannerText">Pricing</h1>
-            <div class="sectionBannerColorBlock"></div>
-        </div>
-        this will be the pricing container... (not connected to footer.)
-    </div>
-    <footer>
-        <div class="footerMainContainer">
-            <div class="footerBusinessSection">
-                <div>
-                    <div class="logoContainer">
-                        <p class="logoBold">SCR</p>
-                        <p class="logoText">Stover's</br>Computer Repair</p>
-                    </div>
-                    <h3 class="footerSlogan">Where Tech Meets Trust</h3>
-                </div>
-                <div>
-                    <div class="footerSocialsContainer"> 
-                        <a href="https://www.instagram.com/stover.repair/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61552551197313" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://twitter.com/SCR_Tayven" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                    <p class="creditSection">Designed by <a href="https://tayven-stover.com" target="_blank">Tayven Stover</a></p>
-                </div>
-            </div>
-            <div class="footerDivider"></div>
-            <div class="footerLinkSection">
-                <div class="footerLinkContainer">
-                    <p class="footerLinkTitle">Site Links</p>
-                    <a href="index.html" class="footerLink">Home</a>
-                    <a href="services.html" class="footerLink">Services</a>
-                    <a href="about.html" class="footerLink">About</a>
-                    <a href="../index.html#pricing" class="footerLink">Pricing</a>
-                    <a href="#contact" class="footerLink">Contact</a>
-                </div>
-                <div class="footerLinkContainer">
-                    <p class="footerLinkTitle">Our Sites</p>
-                    <a href="https://achievo-timemanager.com/" class="footerLink">Achievo</a>
-                    <a href="https://today-chat.com/" class="footerLink">Today Chat</a>
-                    <a href="https://stovers-computer-repair.com/" class="footerLink">SCR</a>
-                </div>
-            </div>
-            <div class="footerDivider"></div>
-            <div class="footerContactSection" id="contact">
-                <form class="footerContactContainer">
-                    <div class="inputLabelContainer">
-                        <label for="contactName" class="input-label">Name:</label>
-                        <input type="text" name="contactName" id="contactName" onfocus="inputFocusHandler(this)"
-                            onblur="inputBlurHandler(this)" required class="consultationInput">
-                    </div>
-                    <div class="inputLabelContainer">
-                        <label for="contactEmail" class="input-label">Email:</label>
-                        <input type="email" name="contactEmail" id="contactEmail" onfocus="inputFocusHandler(this)"
-                            onblur="inputBlurHandler(this)" required class="consultationInput">
-                    </div>
-                    <textarea name="message" id="message" rows="6" required placeholder="Message"></textarea>
-                    <input type="submit" value="Submit" class="contactButton" id="contactSubmit">
-                </form>
-            </div>
-        </div>
-    </footer>
     <script src="javascript/engine.js"></script>
-    <script src="https://kit.fontawesome.com/382b2907de.js" crossorigin="anonymous"></script>
 </body>
-
 </html>

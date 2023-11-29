@@ -1,3 +1,8 @@
 [build]
     publish = "dist/"
     functions = "serverless/"
+
+[[redirects]]
+    from = "/*"
+    to = "/404.html"
+    status = 404

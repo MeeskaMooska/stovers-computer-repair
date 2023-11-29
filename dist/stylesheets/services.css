@@ -122,11 +122,16 @@
     color:rgb(65, 65, 203);
     width: 100%;
     cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 .serviceButton:hover {
     background: rgb(65, 65, 203);
     color: white;
+    letter-spacing: 1px;
 }
 
 .serviceImageFlat {

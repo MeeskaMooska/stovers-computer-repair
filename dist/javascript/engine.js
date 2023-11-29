@@ -1,3 +1,17 @@
+// Contact code
+const contactSubmit = document.getElementById('contactSubmit')
+contactSubmit.addEventListener('click', handleContactSubmit)
+
+const contactName = document.getElementById('contactName')
+const contactEmail = document.getElementById('contactEmail')
+const message = document.getElementById('message')
+
+function handleContactSubmit(e) {
+    e.preventDefault()
+    console.log('Contact form submitted')
+    console.log(contactName.value)
+}
+
 function closeBanner() {
     const banner = document.getElementById('banner');
     const bannerLeft = document.getElementById('banner-left');
