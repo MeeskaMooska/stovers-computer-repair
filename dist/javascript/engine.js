@@ -42,13 +42,13 @@ let sellingPointI = 0
 let sellingPointText = sellingPoints[sellingPointPos]
 
 function sellingPointTypeWriter() {
-  if (sellingPointI < sellingPointText.length) {
-    sellingPoint.innerHTML += sellingPointText.charAt(sellingPointI)
-    sellingPointI++
-    setTimeout(sellingPointTypeWriter,  Math.floor(Math.random() * 100) + 50)
-  } else if (sellingPointI === sellingPointText.length) {
-    setTimeout(sellingPointDelete,  2000)
-  }
+    if (sellingPointI < sellingPointText.length) {
+        sellingPoint.innerHTML += sellingPointText.charAt(sellingPointI)
+        sellingPointI++
+        setTimeout(sellingPointTypeWriter, Math.floor(Math.random() * 100) + 50)
+    } else if (sellingPointI === sellingPointText.length) {
+        setTimeout(sellingPointDelete, 2000)
+    }
 }
 
 function sellingPointDelete() {
@@ -63,7 +63,7 @@ function sellingPointDelete() {
         sellingPointText = sellingPoints[sellingPointPos]
         sellingPointTypeWriter()
     }
-    
+
 }
 
 // Slogan typewriter effect.
@@ -72,13 +72,36 @@ let sloganI = 0
 let text = "Where Tech Meets Trust - SCR"
 
 function sloganTypeWriter() {
-  if (sloganI < text.length) {
-    slogan.innerHTML += text.charAt(sloganI)
-    sloganI++
-    setTimeout(sloganTypeWriter, Math.floor(Math.random() * 100) + 50)
-  } else {
-    slogan.nextElementSibling.remove()
-  }
+    if (sloganI < text.length) {
+        slogan.innerHTML += text.charAt(sloganI)
+        sloganI++
+        setTimeout(sloganTypeWriter, Math.floor(Math.random() * 100) + 50)
+    } else {
+        slogan.nextElementSibling.remove()
+    }
+}
+
+
+let navOpen = false
+function handleHamburger() {
+    navOpen = !navOpen
+
+    const nav = document.querySelector('.headerRight')
+    const hamburgerLines = document.querySelectorAll('.hamburgerLine')
+
+    if (navOpen) {
+        nav.classList.add('navOpen')
+
+        for (let i = 0; i < hamburgerLines.length; i++) {
+            hamburgerLines[i].classList.add('navOpen')
+        }
+    } else {
+        nav.classList.remove('navOpen')
+        
+        for (let i = 0; i < hamburgerLines.length; i++) {
+            hamburgerLines[i].classList.remove('navOpen')
+        }
+    }
 }
 
 sellingPointTypeWriter()

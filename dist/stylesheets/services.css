@@ -1,3 +1,136 @@
 .servicesContainer {
     overflow: hidden;
 }
+
+.servicesCardContainer {
+    display: grid;
+    padding: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 40px;
+    position: relative;
+    z-index: 0;
+}
+
+.servicesCardContainer::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, var(--theme-2) 50%, var(--primary-1) 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+    .servicesCardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .servicesCardContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 300px;
+    width: 240px;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0px 0px 8px 0px grey;
+    transition: .6s;
+    background: var(--primary-1)
+}
+
+.serviceCard:hover {
+    height: 320px;
+    padding-top: 0;
+    box-shadow: 0px 0px 12px 2px lightgrey;
+}
+
+.serviceImageWindow {
+    margin-top: -2px;
+    width: 100px;
+    height: 100px;
+    background: rgb(240, 240, 240);
+    border-radius: 100%;
+    transition: .6s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.serviceCard:hover .serviceImageWindow {
+    width: calc(100% + 40px);
+    border-radius: 0;
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 4px;
+}
+
+.serviceImageContainer {
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.serviceImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.serviceTitle {
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.serviceDescription {
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    max-height: 100px;
+    overflow: hidden;
+    margin: 4px;
+    box-shadow: inset 0px -80px 12px -80px grey;
+}
+
+.serviceButton {
+    background: rgb(240, 240, 240);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    transition: .3s;
+    color:rgb(65, 65, 203);
+    width: 100%;
+    cursor: pointer;
+}
+
+.serviceButton:hover {
+    background: rgb(65, 65, 203);
+    color: white;
+}
+
+.serviceImageFlat {
+    width: 100%;
+    height: 120px;
+    background: rgb(240, 240, 240);
+}
