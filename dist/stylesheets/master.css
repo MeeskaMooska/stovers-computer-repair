@@ -56,6 +56,10 @@ header {
     letter-spacing: 1px;
 }
 
+.headerLeft a {
+    text-decoration: none;
+}
+
 .logoBold {
     font-weight: 900;
     margin: 0;
@@ -201,6 +205,10 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+.footerBusinessSection a {
+    text-decoration: none;
 }
 
 .footerBusinessSection .logoBold {
@@ -349,7 +357,6 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
 
     .footerContactSection {
         width: 90%;
-
     }
 }
 

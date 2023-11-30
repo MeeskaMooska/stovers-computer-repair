@@ -1,4 +1,4 @@
-// Contact code
+// Contact form code
 const contactSubmit = document.getElementById('contactSubmit')
 contactSubmit.addEventListener('click', handleContactSubmit)
 
@@ -12,16 +12,25 @@ function handleContactSubmit(e) {
     console.log(contactName.value)
 }
 
-function closeBanner() {
-    const banner = document.getElementById('banner');
-    const bannerLeft = document.getElementById('banner-left');
-    const bannerRight = document.getElementById('banner-right');
+// FAQ code for expanding and collapsing answers
+function handleFAQClick(el) {
+    // Set answer variables
+    const sibling = el.nextElementSibling
 
-    bannerLeft.style.display = 'none';
-    bannerRight.style.display = 'none';
+    // Set line variables
+    const line1 = el.querySelector('.faqExpanderLine1')
+    console.log(line1)
+
+    if (sibling.classList.contains('faqOpen')) {
+        line1.classList.remove('faqOpen')
+        sibling.classList.remove('faqOpen')
+    } else {
+        line1.classList.add('faqOpen')
+        sibling.classList.add('faqOpen')
+    }
 }
 
-
+// Input focus and blur handling
 function inputFocusHandler(inputObject) {
     let inputLabel = inputObject.previousElementSibling
     inputLabel.classList.add('input-label-active');

@@ -15,10 +15,12 @@
 <body>
     <header>
         <div class="headerLeft">
-            <div class="logoContainer">
-                <p class="logoBold">SCR</p>
-                <p class="logoText">Stover's</br>Computer Repair</p>
-            </div>
+            <a href="../index.html">
+                <div class="logoContainer">
+                    <p class="logoBold">SCR</p>
+                    <p class="logoText">Stover's</br>Computer Repair</p>
+                </div>
+            </a>
         </div>
         <div class="headerRight">
             <a href="../services.html" class="headerLink">Services</a>
@@ -96,24 +98,28 @@
     </div>
     <div class="pitchBox">
         <h1>Personalized Computer Care</h1>
-        <p>At SCR, we tailor solutions to fit your unique tech needs. Expect more than just repair; we're your personalized IT partners.</p>
+        <p>At SCR, we tailor solutions to fit your unique tech needs. Expect more than just repair; we're your
+            personalized IT partners.</p>
         <div class="pitchContainer">
             <div class="pitch">
                 <i class="fa-solid fa-car-side pitchIcon fa-2xl"></i>
                 <h3 class="pitchTitle">We come to you!</h3>
-                <p class="pitchText">Convenience redefined - our mobile service brings expert computer repair directly to your doorstep, wherever you are.</p>
+                <p class="pitchText">Convenience redefined - our mobile service brings expert computer repair directly
+                    to your doorstep, wherever you are.</p>
             </div>
             <div class="pitchDivider"></div>
             <div class="pitch">
                 <i class="fa-solid fa-clock pitchIcon fa-2xl"></i>
                 <h3 class="pitchTitle">Always available for you</h3>
-                <p class="pitchText">No matter the time, SCR is ready to assist. Our flexible, round-the-clock service ensures we're there when you need us most.</p>
+                <p class="pitchText">No matter the time, SCR is ready to assist. Our flexible, round-the-clock service
+                    ensures we're there when you need us most.</p>
             </div>
             <div class="pitchDivider"></div>
             <div class="pitch">
                 <i class="fa-solid fa-dollar-sign pitchIcon fa-2xl"></i>
-                <h3 class="pitchTitle">Affordable, trasparent pricing</h3>
-                <p class="pitchText">Enjoy top-tier computer services at fair, clear prices with SCR. Quality and affordability go hand-in-hand for us.</p>
+                <h3 class="pitchTitle">Affordable, transparent pricing</h3>
+                <p class="pitchText">Enjoy top-tier computer services at fair, clear prices with SCR. Quality and
+                    affordability go hand-in-hand for us.</p>
             </div>
         </div>
     </div>
@@ -317,20 +323,97 @@
         </div>
     </div>
     <div class="pricingContainer" id="pricing">
-        <div class="sectionBanner">
-            <h1 class="sectionBannerText">Pricing</h1>
-            <div class="sectionBannerColorBlock"></div>
+        <div class="pricingTextContainer">
+            <h1 class="pricingHeader">Simple and Transparent Pricing.</h1>
+            <h2 class="pricingMain"><span>50$</span> first two hours</h2>
+            <p class="pricingSub">25$ per subsequent hour.</p>
         </div>
-        this will be the pricing container... (not connected to footer.)
+        <div class="faqContainer">
+            <div class="faq">
+                <div class="faqQuestion" onclick="handleFAQClick(this)">
+                    <h3 class="faqQuestionText"><span class="faqIdent">Q:</span> Is the initial $50 fee a flat rate?
+                    </h3>
+                    <div class="faqExpander" onclick="handleFAQClick(this)">
+                        <div class="faqExpanderLine faqExpanderLine1"></div>
+                        <div class="faqExpanderLine faqExpanderLine2"></div>
+                    </div>
+                </div>
+                <div class="faqAnswer" id="flatRate">
+                    <span class="faqIdent">A:</span> Yes, the $50 is a flat fee that covers the first two hours of our
+                    expert service, regardless of the
+                    type of repair or upgrade.
+                </div>
+            </div>
+            <div class="faqDivider"></div>
+            <div class="faq">
+                <div class="faqQuestion" onclick="handleFAQClick(this)">
+                    <h3 class="faqQuestionText"><span class="faqIdent">Q:</span> Are there any additional fees I should
+                        be aware of?</h3>
+                    <div class="faqExpander" onclick="handleFAQClick(this)">
+                        <div class="faqExpanderLine faqExpanderLine1"></div>
+                        <div class="faqExpanderLine faqExpanderLine2"></div>
+                    </div>
+                </div>
+                <div class="faqAnswer" id="flatRate">
+                    <span class="faqIdent">A:</span> Our pricing is transparent - $50 for the first two hours, then $25
+                    per additional hour. We will inform you upfront if any hardware replacements or special services are
+                    needed, which may incur extra costs.
+                </div>
+            </div>
+            <div class="faqDivider"></div>
+            <div class="faq">
+                <div class="faqQuestion" onclick="handleFAQClick(this)">
+                    <h3 class="faqQuestionText"><span class="faqIdent">Q:</span> What forms of payment do you accept?
+                        be aware of?</h3>
+                    <div class="faqExpander" onclick="handleFAQClick(this)">
+                        <div class="faqExpanderLine faqExpanderLine1"></div>
+                        <div class="faqExpanderLine faqExpanderLine2"></div>
+                    </div>
+                </div>
+                <div class="faqAnswer" id="flatRate">
+                    <span class="faqIdent">A:</span> We accept all major credit/debit cards, cash, and mobile payment options for your convenience.
+                </div>
+            </div>
+            <div class="faqDivider"></div>
+            <div class="faq">
+                <div class="faqQuestion" onclick="handleFAQClick(this)">
+                    <h3 class="faqQuestionText"><span class="faqIdent">Q:</span> Does the service fee include parts if they are needed?
+                        be aware of?</h3>
+                    <div class="faqExpander" onclick="handleFAQClick(this)">
+                        <div class="faqExpanderLine faqExpanderLine1"></div>
+                        <div class="faqExpanderLine faqExpanderLine2"></div>
+                    </div>
+                </div>
+                <div class="faqAnswer" id="flatRate">
+                    <span class="faqIdent">A:</span> Parts are not included in the service fee. If parts are required, we will provide a detailed quote for your approval before proceeding.
+                </div>
+            </div>
+            <div class="faqDivider"></div>
+            <div class="faq">
+                <div class="faqQuestion" onclick="handleFAQClick(this)">
+                    <h3 class="faqQuestionText"><span class="faqIdent">Q:</span> Is there a different rate for emergency services?
+                        be aware of?</h3>
+                    <div class="faqExpander">
+                        <div class="faqExpanderLine faqExpanderLine1"></div>
+                        <div class="faqExpanderLine faqExpanderLine2"></div>
+                    </div>
+                </div>
+                <div class="faqAnswer" id="flatRate">
+                    <span class="faqIdent">A:</span> Emergency or after-hours services may be subject to an additional fee. Please contact us for more details regarding emergency service rates.
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="footerMainContainer">
             <div class="footerBusinessSection">
                 <div>
-                    <div class="logoContainer">
-                        <p class="logoBold">SCR</p>
-                        <p class="logoText">Stover's</br>Computer Repair</p>
-                    </div>
+                    <a href="../index.html">
+                        <div class="logoContainer">
+                            <p class="logoBold">SCR</p>
+                            <p class="logoText">Stover's</br>Computer Repair</p>
+                        </div>
+                    </a>
                     <h3 class="footerSlogan">Where Tech Meets Trust</h3>
                 </div>
                 <div>
@@ -358,9 +441,9 @@
                 </div>
                 <div class="footerLinkContainer">
                     <p class="footerLinkTitle">Our Sites</p>
-                    <a href="https://achievo-timemanager.com/" class="footerLink">Achievo</a>
-                    <a href="https://today-chat.com/" class="footerLink">Today Chat</a>
-                    <a href="https://stovers-computer-repair.com/" class="footerLink">SCR</a>
+                    <a href="https://achievo-timemanager.com/" target="_blank" class="footerLink">Achievo</a>
+                    <a href="https://today-chat.com/" target="_blank" class="footerLink">Today Chat</a>
+                    <a href="https://stovers-computer-repair.com/" target="_blank" class="footerLink">SCR</a>
                 </div>
             </div>
             <div class="footerDivider"></div>
