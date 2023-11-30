@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stover's Computer Repair</title>
+    <link rel="stylesheet" href="stylesheets/master.css">
+    <link rel="stylesheet" href="stylesheets/intro.css">
+    <link rel="stylesheet" href="stylesheets/services.css">
+    <link rel="stylesheet" href="stylesheets/pricing.css">
+    <link rel="stylesheet" href="stylesheets/pitch.css">
+    <link rel="stylesheet" href="stylesheets/about.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerLeft">
+            <a href="../index.html">
+                <div class="logoContainer">
+                    <p class="logoBold">SCR</p>
+                    <p class="logoText">Stover's</br>Computer Repair</p>
+                </div>
+            </a>
+        </div>
+        <div class="headerRight">
+            <a href="../services.html" class="headerLink">Services</a>
+            <a href="./about.html" class="headerLink">About</a>
+            <a href="./index.html#pricing" class="headerLink">Pricing</a>
+            <a href="#contact" class="headerLink">Contact</a>
+        </div>
+        <div class="hamburgerContainer" onclick="handleHamburger()">
+            <div class="hamburgerLine hamburgerLine1"></div>
+            <div class="hamburgerLine hamburgerLine2"></div>
+            <div class="hamburgerLine hamburgerLine3"></div>
+        </div>
+    </header>
+    <div class="aboutBox">
+        <div class="aboutContainer">
+            <h1 class="aboutTitle">About us.</h1>
+            <p class="aboutSubtext">Stover's Computer Repair: Where tech meets trust.</p>
+            <h2 class="aboutHeading">Why computer repair?</h2>
+            <p class="aboutText">
+                As someone deeply immersed in the world of computers, I truly understand how aggravating computer
+                problems can be. In today's digital age, we rely heavily on these machines for almost everything, and
+                it's a significant disruption when they malfunction. My goal is to alleviate this stress by swiftly
+                restoring your computer to full functionality. This way, you can quickly return to your important tasks
+                with minimal interruption. My focus is on efficient, effective solutions to get you back on track
+                without delay.
+            </p>
+            <h2 class="aboutHeading">Our Approach to Computer Repair.</h2>
+            <p class="aboutText">
+                At Stover's Computer Repair, we believe the key to effective computer repair starts with understanding
+                the problem directly from the source - you, the computer owner. We initiate the process by asking a
+                series of questions to get a clear picture of the issue at hand. Once we have a good understanding,
+                we'll try to replicate the problem ourselves. This helps us see exactly what's going wrong and why.
+                After pinpointing the problem and its causes, we focus on finding a solution that works best for you,
+                ensuring that your computer needs are met efficiently and effectively.
+            </p>
+            <div class="aboutInfoBox">
+                <div class="aboutInfoContainer">
+                    <a href="tel:1-541-539-9868" type="tel">(541) 539-9868</a>
+                </div>
+                <div class="aboutDivider"></div>
+                <div class="aboutInfoContainer">
+                    <p>Warrenton, VA, 20186</p>
+                </div>
+                <div class="aboutDivider"></div>
+                <div class="aboutInfoContainer">
+                    <a href="mailto:tayven@tayven-stover.com" type="email">Tayven@tayven-stover.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footerMainContainer">
+            <div class="footerBusinessSection">
+                <div>
+                    <a href="../index.html">
+                        <div class="logoContainer">
+                            <p class="logoBold">SCR</p>
+                            <p class="logoText">Stover's</br>Computer Repair</p>
+                        </div>
+                    </a>
+                    <h3 class="footerSlogan">Where Tech Meets Trust</h3>
+                </div>
+                <div>
+                    <div class="footerSocialsContainer">
+                        <a href="https://www.instagram.com/stover.repair/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61552551197313" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/SCR_Tayven" target="_blank"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <p class="creditSection">Designed by <a href="https://tayven-stover.com" target="_blank">Tayven
+                            Stover</a></p>
+                </div>
+            </div>
+            <div class="footerDivider"></div>
+            <div class="footerLinkSection">
+                <div class="footerLinkContainer">
+                    <p class="footerLinkTitle">Site Links</p>
+                    <a href="index.html" class="footerLink">Home</a>
+                    <a href="services.html" class="footerLink">Services</a>
+                    <a href="about.html" class="footerLink">About</a>
+                    <a href="../index.html#pricing" class="footerLink">Pricing</a>
+                    <a href="#contact" class="footerLink">Contact</a>
+                </div>
+                <div class="footerLinkContainer">
+                    <p class="footerLinkTitle">Our Sites</p>
+                    <a href="https://achievo-timemanager.com/" target="_blank" class="footerLink">Achievo</a>
+                    <a href="https://today-chat.com/" target="_blank" class="footerLink">Today Chat</a>
+                    <a href="https://stovers-computer-repair.com/" target="_blank" class="footerLink">SCR</a>
+                </div>
+            </div>
+            <div class="footerDivider"></div>
+            <div class="footerContactSection" id="contact">
+                <h3>Reach Out</h3>
+                <form class="footerContactContainer">
+                    <div class="inputLabelContainer">
+                        <label for="contactName" class="input-label">Name:</label>
+                        <input type="text" name="contactName" id="contactName" onfocus="inputFocusHandler(this)"
+                            onblur="inputBlurHandler(this)" required class="consultationInput">
+                    </div>
+                    <div class="inputLabelContainer">
+                        <label for="contactEmail" class="input-label">Email:</label>
+                        <input type="email" name="contactEmail" id="contactEmail" onfocus="inputFocusHandler(this)"
+                            onblur="inputBlurHandler(this)" required class="consultationInput">
+                    </div>
+                    <textarea name="message" id="message" rows="6" required placeholder="Message"></textarea>
+                    <input type="submit" value="Submit" class="contactButton" id="contactSubmit">
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="javascript/engine.js"></script>
+    <script src="https://kit.fontawesome.com/382b2907de.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -5,6 +5,7 @@
     --theme-2: rgb(28, 28, 103);
 
     --accent-1: rgb(65, 65, 203);
+    /**--accent-1: rgb(53, 140, 233);**/
 }
 
 body,
@@ -319,7 +320,9 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     outline: none;
     border-radius: 0;
     -webkit-appearance: none;
-    appearance: initial;
+    appearance: none;
+    -webkit-border-radius:0px;
+    border-radius: 0px;
 }
 
 .contactButton:hover {
