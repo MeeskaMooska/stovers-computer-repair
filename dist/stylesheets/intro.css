@@ -117,6 +117,8 @@
     box-sizing: border-box;
     background: transparent;
     position: relative;
+    -webkit-appearance: none;
+    appearance: initial;
 }
 
 .consultationSelect {

@@ -171,11 +171,11 @@ header {
     padding: 20px;
     flex-grow: 1;
     max-height: 200px;
-    background-color: var(--theme-1);
+    background-color: var(--theme-2);
 }
 
 footer {
-    background: var(--primary-1)
+    background: var(--primary-1);
 }
 
 footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
@@ -186,6 +186,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     padding: 40px 0;
 }
 
@@ -239,12 +240,12 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
 }
 
 .footerLinkSection {
-    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     gap: 80px;
+    height: 280px;
 }
 
 .footerLinkContainer {
@@ -259,6 +260,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
 .footerLinkTitle {
     font-size: 1em;
     font-weight: 900;
+    margin: 0;
     margin-bottom: 4px;
     color: var(--accent-1);
 }
@@ -292,6 +294,12 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     width: 100%;
 }
 
+.footerContactSection h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--accent-1);
+}
+
 #message {
     width: 100%;
     border: solid 2px var(--accent-1);
@@ -303,6 +311,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     outline: none;
     border-radius: 0;
     -webkit-appearance: none;
+    appearance: initial;
 }
 
 .contactButton:hover {
@@ -335,6 +344,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     .footerLinkSection {
         justify-content: space-evenly;
         width: 100%;
+        height: unset;
     }
 
     .footerContactSection {
