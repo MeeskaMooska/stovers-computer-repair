@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stover's Computer Repair</title>
+    <meta name="description" content="Stover's Computer Repair: Where tech meets trust.">
+    <link rel="stylesheet" href="stylesheets/master.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerLeft">
+            <a href="../index.html">
+                <div class="logoContainer">
+                    <p class="logoBold">SCR</p>
+                    <p class="logoText">Stover's</br>Computer Repair</p>
+                </div>
+            </a>
+        </div>
+        <div class="headerRight">
+            <a href="../services.html" class="headerLink">Services</a>
+            <a href="./about.html" class="headerLink">About</a>
+            <a href="./index.html#pricing" class="headerLink">Pricing</a>
+            <a href="#contact" class="headerLink">Contact</a>
+        </div>
+        <div class="hamburgerContainer" onclick="handleHamburger()">
+            <div class="hamburgerLine hamburgerLine1"></div>
+            <div class="hamburgerLine hamburgerLine2"></div>
+            <div class="hamburgerLine hamburgerLine3"></div>
+        </div>
+    </header>
+    <div class="individualServiceBox">
+        <div>
+            <a href="../services.html" class="backToServices">&#8592; Back to Services</a>
+        </div>
+        <div class="individualServiceContainer">
+            <h1 class="individualServiceTitle">Hardware Repair & Upgrades.</h1>
+            <hr>
+            <p class="individualServiceText">
+                Stover's Computer Repair (SCR) offers a comprehensive Hardware Repair &
+                Upgrade Service, tailored for individual users seeking to enhance or repair their computer hardware.
+                Understanding that hardware issues can be a significant setback, our service is designed to provide
+                efficient, reliable solutions.
+            </p>
+            <p class="individualServiceText">
+                Our team of skilled technicians specializes in a range of hardware repairs, from simple component
+                replacements to more complex fixes. Whether you're facing issues with your hard drive, experiencing
+                problems with your graphics card, or needing a new keyboard, SCR is equipped to handle all types of
+                hardware challenges.
+            </p>
+            <p class="individualServiceText">
+                In addition to repairs, we offer upgrade services to boost your computer's performance. Upgrading
+                hardware can breathe new life into an older system, improving speed, storage capacity, and overall
+                efficiency. We provide expert advice on the best upgrades for your specific needs and budget,
+                ensuring you get the most out of your computer.
+            </p>
+            <p class="individualServiceText">
+                At SCR, we pride ourselves on our customer-centric approach. We offer detailed diagnostics to
+                pinpoint issues accurately, provide clear explanations of the work needed, and ensure you're
+                informed about the choices available. Our goal is to make hardware repairs and upgrades accessible
+                and understandable, even for those with little technical knowledge.
+            </p>
+            <p class="individualServiceText">
+                Choose SCR for your hardware needs and enjoy peace of mind knowing your computer is in expert hands.
+                Our commitment to quality service, combined with our technical expertise, ensures your computer
+                hardware is not just repaired or upgraded but also optimized for your personal use.
+            </p>
+        </div>
+    </div>
+    <div class="individualServiceNav">
+        <div class="serviceNav serviceNavLeft">
+            <a href="./network-services.html">&lt Check out Network Services</a>
+        </div>
+        <div class="individualServiceNavDivider"></div>
+        <div class="serviceNav">
+            <a href="./performance-enhancements.html">Check out Performance Enhancements &gt</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footerMainContainer">
+            <div class="footerBusinessSection">
+                <div>
+                    <a href="../index.html">
+                        <div class="logoContainer">
+                            <p class="logoBold">SCR</p>
+                            <p class="logoText">Stover's</br>Computer Repair</p>
+                        </div>
+                    </a>
+                    <h3 class="footerSlogan">Where Tech Meets Trust</h3>
+                </div>
+                <div>
+                    <div class="footerSocialsContainer">
+                        <a href="https://www.instagram.com/stover.repair/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61552551197313" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/SCR_Tayven" target="_blank"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <p class="creditSection">Designed by <a href="https://tayven-stover.com" target="_blank">Tayven
+                            Stover</a></p>
+                </div>
+            </div>
+            <div class="footerDivider"></div>
+            <div class="footerLinkSection">
+                <div class="footerLinkContainer">
+                    <p class="footerLinkTitle">Site Links</p>
+                    <a href="index.html" class="footerLink">Home</a>
+                    <a href="services.html" class="footerLink">Services</a>
+                    <a href="about.html" class="footerLink">About</a>
+                    <a href="../index.html#pricing" class="footerLink">Pricing</a>
+                    <a href="#contact" class="footerLink">Contact</a>
+                </div>
+                <div class="footerLinkContainer">
+                    <p class="footerLinkTitle">Our Sites</p>
+                    <a href="https://achievo-timemanager.com/" target="_blank" class="footerLink">Achievo</a>
+                    <a href="https://today-chat.com/" target="_blank" class="footerLink">Today Chat</a>
+                    <a href="https://stovers-computer-repair.com/" target="_blank" class="footerLink">SCR</a>
+                </div>
+            </div>
+            <div class="footerDivider"></div>
+            <div class="footerContactSection" id="contact">
+                <h3>Reach Out</h3>
+                <form class="footerContactContainer">
+                    <div class="inputLabelContainer">
+                        <label for="contactName" class="input-label">Name:</label>
+                        <input type="text" name="contactName" id="contactName" onfocus="inputFocusHandler(this)"
+                            onblur="inputBlurHandler(this)" required class="consultationInput">
+                    </div>
+                    <div class="inputLabelContainer">
+                        <label for="contactEmail" class="input-label">Email:</label>
+                        <input type="email" name="contactEmail" id="contactEmail" onfocus="inputFocusHandler(this)"
+                            onblur="inputBlurHandler(this)" required class="consultationInput">
+                    </div>
+                    <textarea name="message" id="message" rows="6" required placeholder="Message"></textarea>
+                    <input type="submit" value="Submit" class="contactButton" id="contactSubmit">
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="../javascript/engine.js"></script>
+    <script src="https://kit.fontawesome.com/382b2907de.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

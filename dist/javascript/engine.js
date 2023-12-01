@@ -2,6 +2,7 @@
 const contactSubmit = document.getElementById('contactSubmit')
 contactSubmit.addEventListener('click', handleContactSubmit)
 
+
 const contactName = document.getElementById('contactName')
 const contactEmail = document.getElementById('contactEmail')
 const message = document.getElementById('message')
