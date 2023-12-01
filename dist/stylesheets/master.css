@@ -183,7 +183,8 @@ footer {
     background: var(--primary-1);
 }
 
-footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
+footer .logoContainer:hover .logoBold,
+footer .logoContainer:hover .logoText {
     letter-spacing: unset;
 }
 
@@ -215,6 +216,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
 .footerBusinessSection .logoBold {
     background: var(--accent-1);
 }
+
 .footerBusinessSection .logoText {
     color: var(--accent-1);
 }
@@ -288,7 +290,8 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
+    ;
     gap: 20px;
 }
 
@@ -321,7 +324,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     border-radius: 0;
     -webkit-appearance: none;
     appearance: none;
-    -webkit-border-radius:0px;
+    -webkit-border-radius: 0px;
     border-radius: 0px;
 }
 
@@ -387,7 +390,9 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     padding: 50px 40px;
 }
 
-.aboutContainer h1, h2, p {
+.aboutContainer h1,
+h2,
+p {
     margin: 0px;
 }
 
@@ -445,7 +450,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
 @media screen and (max-width: 800px) {
     .aboutContainer {
         max-width: 70vw;
-    }   
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -467,7 +472,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
 @media screen and (max-width: 500px) {
     .aboutContainer {
         margin: 20px;
-    }   
+    }
 }
 
 /****Pitch****/
@@ -509,7 +514,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
 }
 
 .pitchTitle {
-    margin:0;
+    margin: 0;
     margin-bottom: 30px;
     font-size: 20px;
 }
@@ -531,8 +536,8 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
         flex-direction: column;
         align-items: center;
     }
-    
-    
+
+
 }
 
 /***Pricing****/
@@ -810,7 +815,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     border-radius: 4px;
     padding: 10px 20px;
     transition: .3s;
-    color:rgb(65, 65, 203);
+    color: rgb(65, 65, 203);
     width: 100%;
     cursor: pointer;
     box-sizing: border-box;
@@ -868,7 +873,8 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     background: var(--accent-1);
 }
 
-.individualServiceContainer h1, p {
+.individualServiceContainer h1,
+p {
     margin: 0;
 }
 
@@ -966,6 +972,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     0% {
         background-position-x: 100%;
     }
+
     100% {
         background-position-x: 40%;
     }
@@ -988,7 +995,8 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     font-weight: 400;
 }
 
-.consultationContainer p, a {
+.consultationContainer p,
+a {
     margin: 0;
     color: var(--accent-1);
 }
@@ -1057,7 +1065,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     position: relative;
     -webkit-appearance: none;
     appearance: none;
-    -webkit-border-radius:0px;
+    -webkit-border-radius: 0px;
     border-radius: 0px;
 }
 
@@ -1125,9 +1133,11 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -1137,7 +1147,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     .introImage {
         width: 550px;
     }
-  }
+}
 
 @media screen and (max-width: 1100px) {
     .introImage {
@@ -1147,7 +1157,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     .overlayText {
         font-size: 19px;
     }
-  }
+}
 
 @media screen and (max-width: 1000px) {
     .introContainer {
@@ -1170,7 +1180,7 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     .overlayText {
         font-size: 17px;
     }
-  }
+}
 
 @media screen and (max-width: 900px) {
     .introImage {
@@ -1180,9 +1190,9 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     .overlayText {
         font-size: 15px;
     }
-  }
+}
 
-  @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .introImage {
         width: 340px;
     }
@@ -1190,4 +1200,42 @@ footer .logoContainer:hover .logoBold, footer .logoContainer:hover .logoText {
     .overlayText {
         font-size: 13px;
     }
-  }
+}
+
+.container404 {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.container404 h1 {
+    font-size: 4em;
+    margin: 0;
+    color: var(--accent-1);
+    font-weight: 900;
+}
+
+.container404 h2 {
+    font-weight: 100;
+}
+
+.divider404 {
+    width: 1px;
+    height: 200px;
+    background: var(--accent-1);
+}
+
+.subContainer404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.subContainer404 a {
+    color: var(--accent-1);
+}
