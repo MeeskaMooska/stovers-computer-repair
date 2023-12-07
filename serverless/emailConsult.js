@@ -24,7 +24,7 @@ exports.handler = async (event) => {
         };
     }
 
-    const { name, email, message } = body;
+    const { name, email, phone, consultDay, consultTime } = body;
 
     try {
         await transporter.sendMail({
@@ -33,11 +33,15 @@ exports.handler = async (event) => {
             subject: `SCR Contact: ${name}`,
             text: `Name: ${name}
             Email: ${email}
-            Message: ${message}`,
+            Phone: ${phone}
+            Consult Day: ${consultDay}
+            Consult Time: ${consultTime}`,
             html: `<style>*{font-family:verdana;}.data-span{font-weight:100;}</style>
             <h3>Name: <span class="data-span">${name}</span></h3>
             <h3>Email: <span class="data-span">${email}</span></h3>
-            <h3>Message: <span class="data-span">${message}</span></h3>`,
+            <h3>Phone: <span class="data-span">${phone}</span></h3>
+            <h3>Consult Day: <span class="data-span">${consultDay}</span></h3>
+            <h3>Consult Time: <span class="data-span">${consultTime}</span></h3>`,
         })
     
         return {

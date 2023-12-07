@@ -35,7 +35,7 @@
         <div class="consultationContainer">
             <h1>Schedule a free consultation today.</h1>
             <p>Call or text us at <a href="tel:1-541-539-9868">(541) 539-9868</a></p>
-            <form action="" class="consultationContainerForm">
+            <form class="consultationContainerForm">
                 <div class="sharedHorizontalInput">
                     <div class="inputLabelContainer">
                         <label for="name" class="input-label">Name:</label>
@@ -55,8 +55,8 @@
                 </div>
                 <div class="sharedHorizontalInput">
                     <div class="inputLabelContainer">
-                        <label for="contactDay" class="select-label">Best day to reach you:</label>
-                        <select name="contactDay" id="contactDay" class="consultationSelect">
+                        <label for="consultDay" class="select-label">Best day to reach you:</label>
+                        <select name="consultDay" id="consultDay" class="consultationSelect">
                             <option value="Monday">Monday</option>
                             <option value="Tuesday">Tuesday</option>
                             <option value="Wednesday" selected>Wednesday</option>
@@ -67,15 +67,15 @@
                         </select>
                     </div>
                     <div class="inputLabelContainer">
-                        <label for="contactTime" class="select-label">Best time to reach you:</label>
-                        <select name="contactTime" id="contactTime" class="consultationSelect">
+                        <label for="consultTime" class="select-label">Best time to reach you:</label>
+                        <select name="consultTime" id="consultTime" class="consultationSelect">
                             <option value="Morning">Morning</option>
                             <option value="Afternoon" selected>Afternoon</option>
                             <option value="Evening">Evening</option>
                         </select>
                     </div>
                 </div>
-                <input type="submit" value="Schedule" class="consultationButton">
+                <input type="submit" value="Schedule" class="consultationButton" id="consultSubmit">
             </form>
         </div>
         <div class="introImageContainer">

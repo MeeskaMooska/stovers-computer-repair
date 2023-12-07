@@ -7,10 +7,54 @@ const contactName = document.getElementById('contactName')
 const contactEmail = document.getElementById('contactEmail')
 const message = document.getElementById('message')
 
-function handleContactSubmit(e) {
+async function handleContactSubmit(e) {
     e.preventDefault()
-    console.log('Contact form submitted')
-    console.log(contactName.value)
+    // send request to serverless function
+    try {
+        const response = await fetch('/.netlify/functions/emailContact', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: contactName.value,
+                email: contactEmail.value,
+                message: message.value,
+            }),
+        })
+        const data = await response.json()
+        console.log(data)
+    } catch (error) {
+        console.error(error.error)
+    }
+}
+
+// Consult form code
+const consultSubmit = document.getElementById('consultSubmit')
+consultSubmit.addEventListener('click', handleConsultSubmit)
+
+const consultName = document.getElementById('name')
+const email = document.getElementById('email')
+const phone = document.getElementById('phone')
+const consultDay = document.getElementById('consultDay')
+const consultTime = document.getElementById('consultTime')
+
+async function handleConsultSubmit(e) {
+    e.preventDefault()
+    // send request to serverless function
+    try {
+        const response = await fetch('/.netlify/functions/emailConsult', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: consultName.value,
+                email: email.value,
+                phone: phone.value,
+                contactDay: consultDay.value,
+                contactTime: consultTime.value,
+            }),
+        })
+        const data = await response.json()
+        console.log(data)
+    } catch (error) {
+        console.error(error.error)
+    }
 }
 
 // FAQ code for expanding and collapsing answers
@@ -121,7 +165,7 @@ function handleHamburger() {
         }
     } else {
         nav.classList.remove('navOpen')
-        
+
         for (let i = 0; i < hamburgerLines.length; i++) {
             hamburgerLines[i].classList.remove('navOpen')
         }
