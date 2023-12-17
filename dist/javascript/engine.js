@@ -9,7 +9,8 @@ const message = document.getElementById('message')
 async function handleContactSubmit(e) {
     e.preventDefault()
     // send request to serverless function
-    try {
+    // Blocking this for temporary security reasons (I have no sec and need to make some before I open this up to the world)
+    /*try {
         const response = await fetch('/.netlify/functions/emailContact', {
             method: 'POST',
             body: JSON.stringify({
@@ -22,7 +23,7 @@ async function handleContactSubmit(e) {
         console.log(data)
     } catch (error) {
         console.error(error.error)
-    }
+    }*/
 }
 
 // Input focus and blur handling

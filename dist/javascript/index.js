@@ -11,7 +11,7 @@ const consultTime = document.getElementById('consultTime')
 async function handleConsultSubmit(e) {
     e.preventDefault()
     // send request to serverless function
-    try {
+    /*try {
         const response = await fetch('/.netlify/functions/emailConsult', {
             method: 'POST',
             body: JSON.stringify({
@@ -26,7 +26,7 @@ async function handleConsultSubmit(e) {
         console.log(data)
     } catch (error) {
         console.error(error.error)
-    }
+    }*/
 }
 
 // FAQ code for expanding and collapsing answers
