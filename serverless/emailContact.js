@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer");
 const { env } = require("process");
-console.log(env.EMAIL_ACCOUNT, env.EMAIL_PASSWORD);
 
 const transporter = nodemailer.createTransport({
     host: "smtp.forwardemail.net",

@@ -5,25 +5,44 @@ contactSubmit.addEventListener('click', handleContactSubmit)
 const contactName = document.getElementById('contactName')
 const contactEmail = document.getElementById('contactEmail')
 const message = document.getElementById('message')
+let contactSubmitted = false
 
 async function handleContactSubmit(e) {
     e.preventDefault()
-    // send request to serverless function
-    // Blocking this for temporary security reasons (I have no sec and need to make some before I open this up to the world)
-    /*try {
-        const response = await fetch('/.netlify/functions/emailContact', {
-            method: 'POST',
-            body: JSON.stringify({
-                name: contactName.value,
-                email: contactEmail.value,
-                message: message.value,
-            }),
-        })
-        const data = await response.json()
-        console.log(data)
-    } catch (error) {
-        console.error(error.error)
-    }*/
+    // check if a contact request has already been submitted
+    if (contactSubmitted) {
+        window.alert('You have already submitted a contact request. Please await a response.')
+    } else {
+        if (contactName.value !== '' && contactEmail.value !== '' && message.value !== '') {
+            // check email validity
+            if (contactEmail.value.includes('@')) {
+                // set contactSubmitted to true to prevent multiple submissions
+                contactSubmitted = true
+                contactSubmit.value = 'Sending...'
+
+                // send request to serverless function
+                try {
+                    const response = await fetch('/.netlify/functions/emailContact', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            name: contactName.value,
+                            email: contactEmail.value,
+                            message: message.value,
+                        }),
+                    })
+                    const data = await response.json()
+                    console.log(data)
+                    contactSubmit.value = 'Delivered!'
+                } catch (error) {
+                    console.error(error.error)
+                }
+            } else {
+                window.alert('Please enter a valid email address.')
+            }
+        } else {
+            window.alert('Please fill out all required contact fields.')
+        }
+    }
 }
 
 // Input focus and blur handling

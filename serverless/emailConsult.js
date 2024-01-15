@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer");
 const { env } = require("process");
-console.log(env.EMAIL_ACCOUNT, env.EMAIL_PASSWORD);
 
 const transporter = nodemailer.createTransport({
     host: "smtp.forwardemail.net",
@@ -46,9 +45,10 @@ exports.handler = async (event) => {
     
         return {
             statusCode: 200,
-            body: JSON.stringify({ message: 'Email sent.' }),
+            body: JSON.stringify({ message: "Email Sent" }),
         }
     } catch(error) {
+        console.error(error)
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error sending email.', error: error }),

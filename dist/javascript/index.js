@@ -7,26 +7,48 @@ const email = document.getElementById('email')
 const phone = document.getElementById('phone')
 const consultDay = document.getElementById('consultDay')
 const consultTime = document.getElementById('consultTime')
+let consultSubmitted = false
 
 async function handleConsultSubmit(e) {
     e.preventDefault()
-    // send request to serverless function
-    /*try {
-        const response = await fetch('/.netlify/functions/emailConsult', {
-            method: 'POST',
-            body: JSON.stringify({
-                name: consultName.value,
-                email: email.value,
-                phone: phone.value,
-                contactDay: consultDay.value,
-                contactTime: consultTime.value,
-            }),
-        })
-        const data = await response.json()
-        console.log(data)
-    } catch (error) {
-        console.error(error.error)
-    }*/
+    // check if a consultation request has already been submitted
+    if (consultSubmitted) {
+        window.alert('You have already submitted a consultation request. Please await a response.')
+    } else {
+        if (consultName.value !== '' && email.value !== '' && phone.value !== '') {
+            // check email validity
+            if (email.value.includes('@')) {
+                // set consultSubmitted to true to prevent multiple submissions
+                consultSubmitted = true
+                consultSubmit.value = 'Sending...'
+
+                // send request to serverless function
+                try {
+                    const response = await fetch('/.netlify/functions/emailConsult', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            name: consultName.value,
+                            email: email.value,
+                            phone: phone.value,
+                            consultDay: consultDay.value,
+                            consultTime: consultTime.value,
+                        }),
+                    })
+                    const data = await response.json()
+                    console.log(data.message)
+                    consultSubmit.value = 'Delivered!'
+                } catch (error) {
+                    // Not really handling errors here, just logging them for now. ill keep an eye on server errors.
+                    console.error(error.error)
+                }
+            } else {
+                window.alert('Please enter a valid email address.')
+            }
+        }
+        else {
+            window.alert('Please fill out all required consultation fields.')
+        }
+    }
 }
 
 // FAQ code for expanding and collapsing answers
